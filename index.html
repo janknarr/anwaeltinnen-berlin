@@ -11,12 +11,24 @@
   body { font-family: 'Inter', sans-serif; font-size: clamp(16px, 1.8vw, 24px); background: #fff; color: #1a1a18; }
 
   /* NAV */
-  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem 1.5rem var(--side); border-bottom: 0.5px solid #e0ddd6; }
+  nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 1.5rem 2.5rem 1.5rem var(--side); border-bottom: 0.5px solid #e0ddd6; }
+  .nav-wrap { position: sticky; top: 0; background: #fff; z-index: 100; border-bottom: 0.5px solid #e0ddd6; }
+  .nav-wrap nav { border-bottom: none; }
   .logo { display: flex; align-items: center; }
-  nav ul { display: flex; gap: 2rem; list-style: none; }
-  nav a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; text-decoration: none; }
-  .lang { display: flex; gap: 0.75rem; font-size: 11px; color: #bbb; }
+  nav ul { display: flex; gap: 2rem; list-style: none; justify-content: center; }
+  nav ul li { position: relative; }
+  nav a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; text-decoration: none; transition: color 0.2s; }
+  nav a:hover { color: #1a1a18; }
+  .lang { display: flex; gap: 0.75rem; font-size: 11px; color: #bbb; justify-content: flex-end; }
   .lang .active { color: #1a1a18; border-bottom: 0.5px solid currentColor; }
+
+  /* DROPDOWN */
+  .nav-dropdown { position: absolute; top: calc(100% + 1.25rem); left: 50%; transform: translateX(-50%); background: #fff; border: 0.5px solid #e0ddd6; min-width: 220px; padding: 0.5rem 0; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease; transform: translateX(-50%) translateY(-6px); pointer-events: none; }
+  nav ul li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .nav-dropdown a { display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; padding: 0.6rem 1.25rem; white-space: nowrap; transition: color 0.15s, background 0.15s; }
+  .nav-dropdown a:hover { color: #1a1a18; background: #f7f5f0; }
+  .has-dropdown > a::after { content: ''; display: inline-block; width: 5px; height: 5px; border-right: 0.5px solid currentColor; border-bottom: 0.5px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: 5px; vertical-align: middle; transition: transform 0.2s; }
+  .has-dropdown:hover > a::after { transform: rotate(225deg) translateY(2px); }
 
   /* HERO */
   .hero { display: grid; grid-template-columns: 45% 55%; align-items: end; width: 100%; margin-bottom: 0; padding-bottom: 0; max-width: 1400px; margin-left: auto; margin-right: auto; }
@@ -103,9 +115,50 @@
   .city.fade-up { transform: none; }
   .city.fade-up.visible { transform: none; }
 
+  /* MOBILE CONTROLS */
+  .mob-controls { display: none; align-items: center; gap: 1.5rem; }
+
+  /* Sprach-Dropdown mobile */
+  .mob-lang-wrap { position: relative; }
+  .mob-lang-btn { background: none; border: none; cursor: pointer; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1a1a18; display: flex; align-items: center; gap: 5px; padding: 0; }
+  .mob-lang-arrow { display: inline-block; width: 5px; height: 5px; border-right: 0.5px solid #1a1a18; border-bottom: 0.5px solid #1a1a18; transform: rotate(45deg) translateY(-2px); transition: transform 0.2s; }
+  .mob-lang-wrap.open .mob-lang-arrow { transform: rotate(225deg) translateY(-2px); }
+  .mob-lang-dropdown { position: absolute; top: calc(100% + 0.75rem); right: 0; background: #fff; border: 0.5px solid #e0ddd6; padding: 0.4rem 0; opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.2s, transform 0.2s; min-width: 60px; z-index: 200; }
+  .mob-lang-wrap.open .mob-lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mob-lang-opt { display: block; padding: 0.5rem 1rem; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; cursor: pointer; }
+  .mob-lang-opt.active { color: #1a1a18; }
+  .mob-lang-opt:hover { color: #1a1a18; background: #f7f5f0; }
+
+  /* HAMBURGER */
+  .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 22px; height: 32px; cursor: pointer; background: none; border: none; padding: 0; }
+  .hamburger span { display: block; height: 0.5px; background: #1a1a18; transition: transform 0.3s ease, opacity 0.3s ease; transform-origin: center; }
+  .hamburger.open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+  /* MOBILE DRAWER */
+  .mobile-drawer { display: none; position: fixed; top: 0; left: 0; right: 0; background: #fff; z-index: 99; border-bottom: 0.5px solid #e0ddd6; transform: translateY(-100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); padding-top: 62px; }
+  .mobile-drawer.open { transform: translateY(0); }
+  .mobile-drawer ul { list-style: none; padding: 1rem 0 2rem; }
+  .mobile-drawer ul li { border-bottom: 0.5px solid #f0ece3; }
+  .mobile-drawer ul li:first-child { border-top: 0.5px solid #f0ece3; }
+  .mob-link { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #1a1a18; text-decoration: none; cursor: pointer; }
+  .mob-link .mob-arrow { width: 5px; height: 5px; border-right: 0.5px solid #999; border-bottom: 0.5px solid #999; transform: rotate(45deg); transition: transform 0.25s ease; flex-shrink: 0; }
+  .mob-sub-toggle.open .mob-arrow { transform: rotate(225deg); }
+  .mob-submenu { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.22,1,0.36,1); background: #f7f5f0; }
+  .mob-submenu.open { max-height: 400px; }
+  .mob-submenu a { display: block; padding: 0.75rem 1.5rem 0.75rem 2rem; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; text-decoration: none; border-bottom: 0.5px solid #ede9e0; }
+  .mob-submenu a:last-child { border-bottom: none; }
+  .mob-submenu a:hover { color: #1a1a18; }
+
   @media (max-width: 1100px) {
     :root { --side: 1.5rem; }
+    nav { grid-template-columns: 1fr auto; padding: 1rem 1.5rem; }
     nav ul { display: none; }
+    .lang-desktop { display: none; }
+    .mob-controls { display: flex; }
+    .hamburger { display: flex; }
+    .mobile-drawer { display: block; }
     .hero { grid-template-columns: 1fr; }
     .hero-text { padding: 3rem 1.5rem 0.5rem; }
     .hero-img { padding-top: 0; }
@@ -124,17 +177,87 @@
 </head>
 <body>
 
+<div class="nav-wrap">
 <nav style="max-width:1400px;margin:0 auto;">
   <div class="logo"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309.55 60.9" style="height:36px;width:auto;display:block;"><defs><style>.cls-1{fill:#ff97b6}.cls-2{font-family:EBGaramond-Regular,"EB Garamond";font-size:53px}.cls-3{fill:#e4aaec}.cls-4{font-family:EBGaramondRoman-SemiBold,"EB Garamond";font-weight:600;font-size:32px}.cls-5{font-family:EBGaramondRoman-Medium,"EB Garamond";font-weight:500;font-size:32px}.cls-6{fill:#9cfbac}.cls-7{fill:#42e5bf}.cls-8{fill:#fffb86}.cls-9{letter-spacing:-.02em}.cls-10{letter-spacing:-.02em}.cls-11{letter-spacing:-.04em}.cls-12{letter-spacing:-.01em}</style></defs><text class="cls-4" transform="translate(50.55 42.05)"><tspan x="0" y="0">a</tspan><tspan class="cls-9" x="13.6" y="0">n</tspan><tspan class="cls-10" x="30.5" y="0">w</tspan><tspan x="53.22" y="0">ä</tspan><tspan class="cls-12" x="66.82" y="0">l</tspan><tspan class="cls-11" x="75.1" y="0">t</tspan><tspan x="85.18" y="0"> </tspan><tspan class="cls-10" x="92.38" y="0"> </tspan><tspan x="98.94" y="0">innen berlin</tspan></text><text class="cls-5" transform="translate(137.72 48.43)"><tspan x="0" y="0">*</tspan></text><circle class="cls-8" cx="7.57" cy="24.59" r="7.57"></circle><circle class="cls-7" cx="37.83" cy="24.59" r="7.57"></circle><circle class="cls-1" cx="30.26" cy="37.68" r="7.57"></circle><circle class="cls-6" cx="15.13" cy="37.68" r="7.57"></circle><circle class="cls-3" cx="22.7" cy="24.59" r="7.57"></circle><text class="cls-2" transform="translate(3.77 43.73)"><tspan x="0" y="0">w</tspan></text></svg></div>
   <ul>
-    <li><a href="file:///Users/jan/Downloads/anwaeltinnen_v60_1.html#">Team</a></li>
-    <li><a href="file:///Users/jan/Downloads/anwaeltinnen_v60_1.html#">Rechtsgebiete</a></li>
-    <li><a href="file:///Users/jan/Downloads/anwaeltinnen_v60_1.html#">Kontakt</a></li>
+    <li><a href="/ueber-uns">Über uns</a></li>
+    <li class="has-dropdown">
+      <a href="#">Team</a>
+      <div class="nav-dropdown">
+        <a href="/team/maria-kroepfl">Maria Kröpfl</a>
+        <a href="/team/barbara-petersen">Barbara Petersen</a>
+        <a href="/team/christina-clemm">Christina Clemm</a>
+        <a href="/team/inken-stern">Inken Stern</a>
+        <a href="/team/valeska-knarr">Valeska Knarr</a>
+        <a href="/team/barbara-wessel">Barbara Wessel</a>
+      </div>
+    </li>
+    <li class="has-dropdown">
+      <a href="#">Rechtsgebiete</a>
+      <div class="nav-dropdown">
+        <a href="/rechtsgebiete/strafverteidigung">Strafverteidigung &amp; Nebenklage</a>
+        <a href="/rechtsgebiete/asyl">Asyl &amp; Aufenthaltsrecht</a>
+        <a href="/rechtsgebiete/familie">Familie &amp; Partnerschaft</a>
+        <a href="/rechtsgebiete/trans">Trans* &amp; Personenstand</a>
+        <a href="/rechtsgebiete/erbschaft">Erbschaft</a>
+      </div>
+    </li>
+    <li><a href="#footer-kontakt">Kontakt</a></li>
   </ul>
-  <div class="lang">
+  <!-- Desktop: Sprache -->
+  <div class="lang lang-desktop">
     <span class="active">DE</span><span>EN</span><span>TR</span><span>RU</span><span>AR</span>
   </div>
+  <!-- Mobile: Sprach-Dropdown + Hamburger -->
+  <div class="mob-controls">
+    <div class="mob-lang-wrap" id="mobLangWrap">
+      <button class="mob-lang-btn" id="mobLangBtn">DE <span class="mob-lang-arrow"></span></button>
+      <div class="mob-lang-dropdown" id="mobLangDropdown">
+        <span class="mob-lang-opt active" data-lang="DE">DE</span>
+        <span class="mob-lang-opt" data-lang="EN">EN</span>
+        <span class="mob-lang-opt" data-lang="TR">TR</span>
+        <span class="mob-lang-opt" data-lang="RU">RU</span>
+        <span class="mob-lang-opt" data-lang="AR">AR</span>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+</div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <ul>
+    <li><a class="mob-link" href="/ueber-uns">Über uns</a></li>
+    <li>
+      <div class="mob-link mob-sub-toggle" data-target="mob-team">
+        Team <span class="mob-arrow"></span>
+      </div>
+      <div class="mob-submenu" id="mob-team">
+        <a href="/team/maria-kroepfl">Maria Kröpfl</a>
+        <a href="/team/barbara-petersen">Barbara Petersen</a>
+        <a href="/team/christina-clemm">Christina Clemm</a>
+        <a href="/team/inken-stern">Inken Stern</a>
+        <a href="/team/valeska-knarr">Valeska Knarr</a>
+        <a href="/team/barbara-wessel">Barbara Wessel</a>
+      </div>
+    </li>
+    <li>
+      <div class="mob-link mob-sub-toggle" data-target="mob-rg">
+        Rechtsgebiete <span class="mob-arrow"></span>
+      </div>
+      <div class="mob-submenu" id="mob-rg">
+        <a href="/rechtsgebiete/strafverteidigung">Strafverteidigung &amp; Nebenklage</a>
+        <a href="/rechtsgebiete/asyl">Asyl &amp; Aufenthaltsrecht</a>
+        <a href="/rechtsgebiete/familie">Familie &amp; Partnerschaft</a>
+        <a href="/rechtsgebiete/trans">Trans* &amp; Personenstand</a>
+        <a href="/rechtsgebiete/erbschaft">Erbschaft</a>
+      </div>
+    </li>
+    <li><a class="mob-link" href="#footer-kontakt" id="mobKontakt">Kontakt</a></li>
+  </ul>
+</div>
 
 <section class="hero">
   <div class="hero-text anim-in">
@@ -282,7 +405,7 @@
   </div>
 </section>
 
-<footer>
+<footer id="footer-kontakt">
   <span>© anwält*innen berlin</span>
   <div><a href="file:///Users/jan/Downloads/anwaeltinnen_v60_1.html#">Impressum</a><a href="file:///Users/jan/Downloads/anwaeltinnen_v60_1.html#">Datenschutz</a><a href="file:///Users/jan/Downloads/anwaeltinnen_v60_1.html#">Downloads</a></div>
 </footer>
@@ -300,7 +423,72 @@
     }
   })();
 
-  // Hero: einmalig beim Laden
+  // Mobile Drawer
+  (function() {
+    var btn = document.getElementById('hamburger');
+    var drawer = document.getElementById('mobileDrawer');
+    var body = document.body;
+
+    btn.addEventListener('click', function() {
+      var isOpen = drawer.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      body.style.overflow = isOpen ? 'hidden' : '';
+      // Sprach-Dropdown schließen
+      document.getElementById('mobLangWrap').classList.remove('open');
+    });
+
+    // Submenüs
+    document.querySelectorAll('.mob-sub-toggle').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var targetId = this.getAttribute('data-target');
+        var sub = document.getElementById(targetId);
+        var isOpen = sub.classList.toggle('open');
+        this.classList.toggle('open', isOpen);
+      });
+    });
+
+    // Kontakt-Link schließt Drawer
+    var mobKontakt = document.getElementById('mobKontakt');
+    if (mobKontakt) {
+      mobKontakt.addEventListener('click', function() {
+        drawer.classList.remove('open');
+        btn.classList.remove('open');
+        body.style.overflow = '';
+      });
+    }
+
+    // Sprach-Dropdown
+    var langWrap = document.getElementById('mobLangWrap');
+    var langBtn = document.getElementById('mobLangBtn');
+    var langDropdown = document.getElementById('mobLangDropdown');
+
+    langBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = langWrap.classList.toggle('open');
+      // Drawer schließen wenn Sprache geöffnet
+      if (isOpen) {
+        drawer.classList.remove('open');
+        btn.classList.remove('open');
+        body.style.overflow = '';
+      }
+    });
+
+    document.querySelectorAll('.mob-lang-opt').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        var lang = this.getAttribute('data-lang');
+        langBtn.childNodes[0].textContent = lang + ' ';
+        document.querySelectorAll('.mob-lang-opt').forEach(function(o) { o.classList.remove('active'); });
+        this.classList.add('active');
+        langWrap.classList.remove('open');
+      });
+    });
+
+    // Klick außerhalb schließt Sprach-Dropdown
+    document.addEventListener('click', function(e) {
+      if (!langWrap.contains(e.target)) langWrap.classList.remove('open');
+    });
+  })();
+
   window.addEventListener('load', function() {
     requestAnimationFrame(function() {
       document.querySelector('.hero-text').classList.add('anim-in');
