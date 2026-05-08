@@ -4,12 +4,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --side: clamp(1.5rem, 10vw, 16rem); }
   html { overflow-x: clip; }
   body { overflow-x: clip; }
-  body { font-family: 'Inter', sans-serif; font-size: clamp(16px, 1.8vw, 24px); background: #fff; color: #1a1a18; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; font-size: clamp(16px, 2.1vw, 32px); background: #fff; color: #1a1a18; }
 
   /* NAV */
   nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 2.5rem 0 var(--side); border-bottom: 0.5px solid #e0ddd6; }
@@ -25,7 +25,7 @@
   .lang .active { color: #1a1a18; border-bottom: 0.5px solid currentColor; }
 
   /* DROPDOWN */
-  .nav-dropdown { position: absolute; top: calc(100% + 1.25rem); left: 50%; transform: translateX(-50%); background: #fff; border: 0.5px solid #e0ddd6; min-width: 220px; padding: 0.5rem 0; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease; transform: translateX(-50%) translateY(-6px); pointer-events: none; }
+  .nav-dropdown { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 0.5px solid #e0ddd6; min-width: 220px; padding: 0.5rem 0; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease; transform: translateX(-50%) translateY(0); pointer-events: none; padding-top: 1.25rem; margin-top: 0; }
   nav ul li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); pointer-events: auto; }
   .nav-dropdown a { display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; padding: 0.6rem 1.25rem; white-space: nowrap; transition: color 0.15s, background 0.15s; }
   .nav-dropdown a:hover { color: #1a1a18; background: #f7f5f0; }
@@ -37,18 +37,18 @@
   .hero-text { padding: 2rem 2rem 5rem var(--side); }
   .eyebrow { font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 1.5rem; margin-top: 0; }
   h1 { font-family: 'EB Garamond', serif; font-size: clamp(48px, 4.5vw, 56px); font-weight: 400; line-height: 1.1; margin-bottom: 2rem; color: #1a1a18; }
-  .hero-sub { font-size: 16px; line-height: 1.8; color: #444; max-width: 380px; }
+  .hero-sub { font-size: clamp(16px, 1.2vw, 19px); line-height: 1.8; color: #444; max-width: 460px; }
   .hero-img { line-height: 0; padding-top: 2rem; }
   .hero-img img { width: 100%; height: auto; display: block; }
 
   /* TEAM */
-  .team-section { background: #3d3b35; padding: 3rem var(--side) 4rem; }
+  .team-section { background: #3a3937; padding: 2rem var(--side) 4rem; }
   .team-section .section-label, .team-section .team-intro { max-width: 700px; margin-left: auto; margin-right: auto; display: block; }
-  .section-label { font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1.5rem; }
+  .section-label { font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 0.75rem; }
   .team-intro { font-family: 'EB Garamond', serif; font-size: clamp(30px, 3.5vw, 42px); color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; line-height: 1.2; }
   .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 700px; margin: 0 auto; }
   .section-inner { max-width: calc(3 * 280px + 2 * 1.5rem); margin: 0 auto; }
-  .team-card { position: relative; overflow: hidden; cursor: pointer; aspect-ratio: 1/1; background: #2a2826; }
+  .team-card { position: relative; overflow: hidden; cursor: pointer; aspect-ratio: 1/1; background: #272727; }
   .team-card:hover .tc-img { transform: scale(1.03); }
   .tc-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.4s ease; filter: grayscale(15%); }
   .tc-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'EB Garamond', serif; font-size: 32px; color: rgba(255,255,255,0.15); background: #2e2c28; }
@@ -58,10 +58,10 @@
   
 
   /* WIE WIR ARBEITEN */
-  .wie { padding: 3rem var(--side) 4rem; background: #f0ece3; }
+  .wie { padding: 2rem var(--side) 4rem; background: #f0ece3; }
   .wie-label, .wie-text { max-width: 700px; margin-left: auto; margin-right: auto; display: block; }
-  .wie-label { font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-bottom: 1.5rem; display: block; }
-  .wie-text { font-size: 16px; line-height: 1.85; color: #3a3a36; max-width: 700px; }
+  .wie-label { font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-bottom: 0.75rem; display: block; }
+  .wie-text { font-size: clamp(16px, 1.2vw, 19px); line-height: 1.85; color: #3a3a36; max-width: 700px; }
   .wie-text strong { color: #1a1a18; font-weight: 500; }
   .pills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
   .pill { font-size: 11px; padding: 4px 12px; border: 0.5px solid #ccc8bc; border-radius: 20px; color: #777; cursor: pointer; }
@@ -74,7 +74,7 @@
   .city-caption { position: absolute; bottom: 1.75rem; left: 2.5rem; font-family: 'EB Garamond', serif; font-size: 14px; font-style: italic; color: rgba(255,255,255,0.45); }
 
   /* RECHTSGEBIETE */
-  .rg-section { padding: 3rem var(--side) 3rem; background: #fff; }
+  .rg-section { padding: 2rem var(--side) 3rem; background: #fff; }
   .rg-section > * { max-width: 700px; margin-left: auto; margin-right: auto; }
   .rg-item { display: flex; justify-content: space-between; align-items: baseline; padding: 1rem 0; border-bottom: 0.5px solid #e8e5de; cursor: pointer; }
   .rg-item:last-of-type { border-bottom: none; }
@@ -83,17 +83,17 @@
   .rg-item:hover .rg-name { color: #888; }
 
   /* QUOTE */
-  .quote-section { padding: 3.5rem var(--side); background: #f0ece3; text-align: center; }
+  .quote-section { padding: 2rem var(--side); background: #f0ece3; text-align: center; }
   blockquote { font-family: 'EB Garamond', serif; font-size: clamp(22px, 2.5vw, 30px); font-style: italic; font-weight: 500; line-height: 1.45; color: #1a1a18; margin-bottom: 1rem; max-width: 700px; margin-left: auto; margin-right: auto; }
   cite { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; font-style: normal; }
 
   /* KONTAKT */
-  .kontakt { padding: 4rem var(--side) 4rem; background: #fff; }
+  .kontakt { padding: 2rem var(--side) 4rem; background: #fff; }
   .kontakt-inner { display: grid; grid-template-columns: 45% 55%; gap: 4rem; max-width: 700px; margin: 0 auto; }
-  .k-label { font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 1.75rem; }
+  .k-label { font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 0.75rem; }
   .k-item { margin-bottom: 1.25rem; }
-  .k-item span { display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin-bottom: 3px; }
-  .k-item p { font-size: 14px; color: #666; line-height: 1.65; }
+  .k-item span { display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-bottom: 3px; }
+  .k-item p { font-size: 14px; color: #1a1a18; line-height: 1.65; }
   .bald { font-size: 11px; font-style: italic; color: #aaa; margin-top: 4px; }
 
   footer { padding: 1.5rem 2.5rem; border-top: 0.5px solid #e8e5de; display: flex; justify-content: space-between; font-size: 11px; color: #aaa; }
@@ -117,7 +117,12 @@
   .city.fade-up { transform: none; }
   .city.fade-up.visible { transform: none; }
 
-  /* MOBILE CONTROLS */
+  @keyframes heartbeat {
+    0%   { transform: scale(1);    opacity: 0.55; }
+    50%  { transform: scale(1.4);  opacity: 0.85; }
+    100% { transform: scale(1);    opacity: 0.55; }
+  }
+  .dot-pulse { animation: heartbeat 6s ease-in-out infinite; }
   .mob-controls { display: none; align-items: center; gap: 1.5rem; }
 
   /* Sprach-Dropdown mobile */
@@ -144,12 +149,12 @@
   .mobile-drawer ul { list-style: none; padding: 1rem 0 2rem; }
   .mobile-drawer ul li { border-bottom: 0.5px solid #f0ece3; }
   .mobile-drawer ul li:first-child { border-top: 0.5px solid #f0ece3; }
-  .mob-link { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #1a1a18; text-decoration: none; cursor: pointer; }
-  .mob-link .mob-arrow { width: 5px; height: 5px; border-right: 0.5px solid #999; border-bottom: 0.5px solid #999; transform: rotate(45deg); transition: transform 0.25s ease; flex-shrink: 0; }
+  .mob-link { display: flex; justify-content: flex-end; align-items: center; padding: 1rem 1.5rem; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #1a1a18; text-decoration: none; cursor: pointer; }
+  .mob-link .mob-arrow { width: 5px; height: 5px; border-right: 0.5px solid #999; border-bottom: 0.5px solid #999; transform: rotate(45deg); transition: transform 0.25s ease; flex-shrink: 0; margin-right: 0.75rem; order: -1; }
   .mob-sub-toggle.open .mob-arrow { transform: rotate(225deg); }
   .mob-submenu { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.22,1,0.36,1); background: #f7f5f0; }
   .mob-submenu.open { max-height: 400px; }
-  .mob-submenu a { display: block; padding: 0.75rem 1.5rem 0.75rem 2rem; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; text-decoration: none; border-bottom: 0.5px solid #ede9e0; }
+  .mob-submenu a { display: block; padding: 0.75rem 1.5rem; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; text-decoration: none; border-bottom: 0.5px solid #ede9e0; text-align: right; }
   .mob-submenu a:last-child { border-bottom: none; }
   .mob-submenu a:hover { color: #1a1a18; }
 
@@ -253,7 +258,6 @@
   </g>
 </svg></div>
   <ul>
-    <li><a href="/ueber-uns">Über uns</a></li>
     <li class="has-dropdown">
       <a href="#">Team</a>
       <div class="nav-dropdown">
@@ -265,6 +269,7 @@
         <a href="/team/barbara-wessel">Barbara Wessel</a>
       </div>
     </li>
+    <li><a href="/ueber-uns">Über uns</a></li>
     <li class="has-dropdown">
       <a href="#">Rechtsgebiete</a>
       <div class="nav-dropdown">
@@ -301,7 +306,6 @@
 </div>
 <div class="mobile-drawer" id="mobileDrawer">
   <ul>
-    <li><a class="mob-link" href="/ueber-uns">Über uns</a></li>
     <li>
       <div class="mob-link mob-sub-toggle" data-target="mob-team">
         Team <span class="mob-arrow"></span>
@@ -315,6 +319,7 @@
         <a href="/team/barbara-wessel">Barbara Wessel</a>
       </div>
     </li>
+    <li><a class="mob-link" href="/ueber-uns">Über uns</a></li>
     <li>
       <div class="mob-link mob-sub-toggle" data-target="mob-rg">
         Rechtsgebiete <span class="mob-arrow"></span>
@@ -348,11 +353,11 @@
 
 <section class="rg-section fade-up">
   <div style="font-size:14px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa;margin-bottom:1.5rem;">Unsere Rechtsgebiete</div>
-  <div class="rg-item rg-fade" style="transition-delay: 0s;"><div class="rg-name"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#fffb86;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;"></span>Strafverteidigung &amp; Nebenklage</div><span>→</span></div>
-  <div class="rg-item rg-fade" style="transition-delay: 0.08s;"><div class="rg-name"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e4aaec;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;"></span>Asyl &amp; Aufenthaltsrecht</div><span>→</span></div>
-  <div class="rg-item rg-fade" style="transition-delay: 0.16s;"><div class="rg-name"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#42e5bf;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;"></span>Familie &amp; Partnerschaft</div><span>→</span></div>
-  <div class="rg-item rg-fade" style="transition-delay: 0.24s;"><div class="rg-name"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#ff97b6;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;"></span>Trans* &amp; Personenstand</div><span>→</span></div>
-  <div class="rg-item rg-fade" style="transition-delay: 0.32s;"><div class="rg-name"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#9cfbac;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;"></span>Erbschaft</div><span>→</span></div>
+  <div class="rg-item rg-fade" style="transition-delay: 0s;"><div class="rg-name"><span class="dot-pulse" style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#fffb86;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;animation-delay:0s;"></span>Strafverteidigung &amp; Nebenklage</div><span>→</span></div>
+  <div class="rg-item rg-fade" style="transition-delay: 0.08s;"><div class="rg-name"><span class="dot-pulse" style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e4aaec;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;animation-delay:1.2s;"></span>Asyl &amp; Aufenthaltsrecht</div><span>→</span></div>
+  <div class="rg-item rg-fade" style="transition-delay: 0.16s;"><div class="rg-name"><span class="dot-pulse" style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#2ab5a0;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;animation-delay:2.4s;"></span>Familie &amp; Partnerschaft</div><span>→</span></div>
+  <div class="rg-item rg-fade" style="transition-delay: 0.24s;"><div class="rg-name"><span class="dot-pulse" style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#ff97b6;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;animation-delay:3.6s;"></span>Trans* &amp; Personenstand</div><span>→</span></div>
+  <div class="rg-item rg-fade" style="transition-delay: 0.32s;"><div class="rg-name"><span class="dot-pulse" style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#9cfbac;margin-right:0.75rem;flex-shrink:0;filter:blur(2px);opacity:0.65;animation-delay:4.8s;"></span>Erbschaft</div><span>→</span></div>
 </section>
 
 <section class="team-section fade-up visible">
@@ -368,8 +373,8 @@
       <div class="tc-overlay">
         <div class="tc-name">Maria Kröpfl</div>
         <div style="display:flex;gap:5px;justify-content:center;margin-top:6px;">
-          <span style="width:8px;height:8px;border-radius:50%;background:#fffb86;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
-          <span style="width:8px;height:8px;border-radius:50%;background:#42e5bf;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#fffb86;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:0.6s;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#2ab5a0;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:1.8s;"></span>
         </div>
         <div class="tc-focus">Asyl · Aufenthaltsrecht</div>
         
@@ -379,8 +384,8 @@
       <div class="tc-overlay">
         <div class="tc-name">Barbara Petersen</div>
         <div style="display:flex;gap:5px;justify-content:center;margin-top:6px;">
-          <span style="width:8px;height:8px;border-radius:50%;background:#fffb86;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
-          <span style="width:8px;height:8px;border-radius:50%;background:#42e5bf;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#fffb86;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:3.0s;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#2ab5a0;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:4.2s;"></span>
         </div>
         <div class="tc-focus">Strafverteidigung · Nebenklage</div>
         
@@ -390,8 +395,8 @@
       <div class="tc-overlay">
         <div class="tc-name">Christina Clemm</div>
         <div style="display:flex;gap:5px;justify-content:center;margin-top:6px;">
-          <span style="width:8px;height:8px;border-radius:50%;background:#fffb86;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
-          <span style="width:8px;height:8px;border-radius:50%;background:#42e5bf;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#fffb86;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:5.4s;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#2ab5a0;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:0.9s;"></span>
         </div>
         <div class="tc-focus">Strafverteidigung · Nebenklage · Trans*</div>
         
@@ -401,9 +406,9 @@
       <div class="tc-overlay">
         <div class="tc-name">Inken Stern</div>
         <div style="display:flex;gap:5px;justify-content:center;margin-top:6px;">
-          <span style="width:8px;height:8px;border-radius:50%;background:#e4aaec;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
-          <span style="width:8px;height:8px;border-radius:50%;background:#ff97b6;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
-          <span style="width:8px;height:8px;border-radius:50%;background:#9cfbac;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#e4aaec;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:2.1s;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#ff97b6;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:3.3s;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#9cfbac;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:4.5s;"></span>
         </div>
         <div class="tc-focus">Asyl · Personenstand · Trans*</div>
         
@@ -414,8 +419,8 @@
       <div class="tc-overlay">
         <div class="tc-name">Valeska Knarr</div>
         <div style="display:flex;gap:5px;justify-content:center;margin-top:6px;">
-          <span style="width:8px;height:8px;border-radius:50%;background:#fffb86;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
-          <span style="width:8px;height:8px;border-radius:50%;background:#42e5bf;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#fffb86;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:1.5s;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#2ab5a0;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:2.7s;"></span>
         </div>
         <div class="tc-focus">Familienrecht · Partnerschaft</div>
         
@@ -425,8 +430,8 @@
       <div class="tc-overlay">
         <div class="tc-name">Barbara Wessel</div>
         <div style="display:flex;gap:5px;justify-content:center;margin-top:6px;">
-          <span style="width:8px;height:8px;border-radius:50%;background:#e4aaec;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
-          <span style="width:8px;height:8px;border-radius:50%;background:#42e5bf;display:inline-block;filter:blur(2px);opacity:0.65;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#e4aaec;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:3.9s;"></span>
+          <span class="dot-pulse" style="width:8px;height:8px;border-radius:50%;background:#2ab5a0;display:inline-block;filter:blur(2px);opacity:0.65;animation-delay:5.1s;"></span>
         </div>
         <div class="tc-focus">Asyl · Familienrecht · Migration</div>
         
@@ -495,7 +500,6 @@
     }
   })();
 
-  // Mobile Drawer
   (function() {
     var btn = document.getElementById('hamburger');
     var drawer = document.getElementById('mobileDrawer');
@@ -546,12 +550,34 @@
     });
 
     document.querySelectorAll('.mob-lang-opt').forEach(function(opt) {
-      opt.addEventListener('click', function() {
+      opt.addEventListener('click', function(e) {
+        e.stopPropagation();
         var lang = this.getAttribute('data-lang');
+        if (lang !== 'DE') {
+          var messages = {
+            'EN': 'This language version is coming soon.',
+            'TR': 'Bu dil sürümü yakında gelecek.',
+            'RU': 'Эта языковая версия скоро появится.',
+            'AR': 'هذه النسخة اللغوية قادمة قريباً.'
+          };
+          langWrap.classList.remove('open');
+          setTimeout(function() { alert(messages[lang]); }, 100);
+          return;
+        }
         langBtn.childNodes[0].textContent = lang + ' ';
         document.querySelectorAll('.mob-lang-opt').forEach(function(o) { o.classList.remove('active'); });
         this.classList.add('active');
         langWrap.classList.remove('open');
+      });
+    });
+
+    // Desktop lang clicks
+    document.querySelectorAll('.lang-desktop span:not(.active)').forEach(function(span) {
+      span.style.cursor = 'pointer';
+      span.addEventListener('click', function() {
+        var messages = { 'EN': 'This language version is coming soon.', 'TR': 'Bu dil sürümü yakında gelecek.', 'RU': 'Эта языковая версия скоро появится.', 'AR': 'هذه النسخة اللغوية قادمة قريباً.' };
+        var lang = this.textContent.trim();
+        if (messages[lang]) alert(messages[lang]);
       });
     });
 
