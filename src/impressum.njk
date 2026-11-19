@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Impressum
+permalink: /impressum/
+---
+<section class="page">
+  <div class="page-narrow legal">
+    <p class="crumb">Impressum</p>
+    <h1>Impressum</h1>
+
+    <h2>Angaben nach § 5 DDG</h2>
+    <p>anwaeltinnen.berlin<br>Bürogemeinschaft</p>
+    <p>{% for p in team | published %}{{ p.name }}<br>{% endfor %}</p>
+    <p>{{ site.address.line1 }}<br>{{ site.address.line2 }}</p>
+    <p>Tel.: +49 (0) 30 / 39 80 86 84<br>Fax: +49 (0) 30 / 39 80 86 63</p>
+
+    <h2>Berufsrechtliche Angaben</h2>
+    <p>Alle Anwält*innen sind Mitglieder der Rechtsanwaltskammer Berlin (Littenstraße 9, 10179 Berlin). Die Berufsbezeichnungen wurden im Land Berlin/Bundesrepublik Deutschland verliehen.</p>
+    <p>Aufsichtsbehörden sind der Präsident des Landgerichts Berlin und die Rechtsanwaltskammer Berlin (Littenstraße 9, 10179 Berlin).</p>
+    <p>Für die Berufsausübung gelten neben den allgemeinen Vorschriften die besonderen berufsrechtlichen Vorschriften der Rechtsanwältinnen und Rechtsanwälte:</p>
+    <ul>
+      <li>Bundesrechtsanwaltsordnung (BRAO)</li>
+      <li>Berufsordnung für Rechtsanwälte (BORA)</li>
+      <li>Fachanwaltsordnung (FAO)</li>
+      <li>Rechtsanwaltsvergütungsgesetz (RVG)</li>
+      <li>Standesregeln der Rechtsanwälte in der Europäischen Gemeinschaft</li>
+    </ul>
+    <p>Die Regelungen sind jeweils auf den Webseiten der Bundesrechtsanwaltskammer und der Rechtsanwaltskammer Berlin einsehbar.</p>
+
+    <h2>Bildnachweis</h2>
+    <p>Fotos: <a href="https://www.katjafeldmeier.com/">Katja Feldmeier</a></p>
+  </div>
+</section>

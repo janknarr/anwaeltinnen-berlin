@@ -1,0 +1,61 @@
+---
+layout: base.njk
+pagination:
+  data: people
+  size: 1
+  alias: p
+permalink: "/team/{{ p.slug }}/"
+eleventyComputed:
+  title: "{{ p.name }}"
+  description: "{{ p.name }}, {{ p.since or 'Rechtsanwältin' }} – {{ p.focus | join(', ') }}. Bürogemeinschaft anwält*innen berlin."
+---
+<section class="page">
+  <div class="page-inner">
+    <p class="crumb"><a href="/#team">Team</a></p>
+    <div class="person">
+      <div>
+        <h1>{{ p.name }}</h1>
+        {% if p.since or p.titles.length %}
+        <p class="person-meta">{% if p.since %}{{ p.since }}{% endif %}{% for t in p.titles %}<br>{{ t }}{% endfor %}</p>
+        {% endif %}
+
+        {% if p.bio.length %}
+        <div class="prose" style="margin-top:1.5rem">{% for b in p.bio %}<p>{{ b | safe }}</p>{% endfor %}</div>
+        {% endif %}
+
+        {% if p.stations.length %}
+        <div class="block-label">Stationen</div>
+        <dl class="timeline prose">{% for s in p.stations %}<dt>{{ s.year }}</dt><dd>{{ s.text }}</dd>{% endfor %}</dl>
+        {% endif %}
+
+        {% if p.memberships.length %}
+        <div class="block-label">Mitgliedschaften &amp; Engagement</div>
+        <ul class="plain-list prose">{% for m in p.memberships %}<li>{{ m | safe }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+      <div class="person-photo">
+        <img src="/bilder/team/{{ p.photo }}.jpg" alt="Porträt {{ p.name }}" width="1200" height="1500">
+      </div>
+    </div>
+
+    <div class="facts">
+      <div>
+        <div class="block-label">Rechtsgebiete</div>
+        <ul>
+          {% for s in p.areas %}{% set a = rechtsgebiete | area(s) %}
+          <li><a class="area-link" href="/rechtsgebiete/{{ a.slug }}/" style="border:0"><span class="dot dot-pulse" style="--c:{{ a.color }};animation-delay:{{ loop.index0 | breath }}"></span><span style="border-bottom:0.5px solid #bbb">{{ a.name }}</span></a></li>
+          {% endfor %}
+        </ul>
+        <ul class="person-focus">{% for f in p.focus %}<li>{{ f }}</li>{% endfor %}</ul>
+      </div>
+      <div>
+        <div class="block-label">Sprachen</div>
+        <p>Ich berate auf {{ p.languages }}.</p>
+      </div>
+      <div>
+        <div class="block-label">Kontakt</div>
+        <p>Tel. <a href="tel:{{ p.phoneHref }}">{{ p.phone }}</a><br><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if title %}{{ title }} – {% endif %}{{ site.name }}</title>
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{% if title %}{{ title }} – {% endif %}{{ site.name }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+{%- set people = team | published -%}
+
+<div class="nav-wrap">
+<nav style="max-width:1400px;margin:0 auto;">
+  <a class="logo" href="/" aria-label="{{ site.name }} – Startseite">{% include "logo.svg" %}</a>
+  <ul>
+    <li class="has-dropdown">
+      <a href="/#team">Team</a>
+      <div class="nav-dropdown">
+        {% for p in people %}<a href="/team/{{ p.slug }}/">{{ p.name }}</a>{% endfor %}
+      </div>
+    </li>
+    <li><a href="/ueber-uns/">Über uns</a></li>
+    <li class="has-dropdown">
+      <a href="/#rechtsgebiete">Rechtsgebiete</a>
+      <div class="nav-dropdown">
+        {% for a in rechtsgebiete %}<a href="/rechtsgebiete/{{ a.slug }}/">{{ a.name }}</a>{% endfor %}
+      </div>
+    </li>
+    <li><a href="/kontakt/">Kontakt</a></li>
+  </ul>
+  <div class="lang lang-desktop">
+    <span class="active">DE</span><span>EN</span><span>TR</span><span>RU</span><span>AR</span>
+  </div>
+  <div class="mob-controls">
+    <div class="mob-lang-wrap" id="mobLangWrap">
+      <button class="mob-lang-btn" id="mobLangBtn">DE <span class="mob-lang-arrow"></span></button>
+      <div class="mob-lang-dropdown" id="mobLangDropdown">
+        <span class="mob-lang-opt active" data-lang="DE">DE</span>
+        <span class="mob-lang-opt" data-lang="EN">EN</span>
+        <span class="mob-lang-opt" data-lang="TR">TR</span>
+        <span class="mob-lang-opt" data-lang="RU">RU</span>
+        <span class="mob-lang-opt" data-lang="AR">AR</span>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+</div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <ul>
+    <li>
+      <div class="mob-link mob-sub-toggle" data-target="mob-team">Team <span class="mob-arrow"></span></div>
+      <div class="mob-submenu" id="mob-team">
+        {% for p in people %}<a href="/team/{{ p.slug }}/">{{ p.name }}</a>{% endfor %}
+      </div>
+    </li>
+    <li><a class="mob-link" href="/ueber-uns/">Über uns</a></li>
+    <li>
+      <div class="mob-link mob-sub-toggle" data-target="mob-rg">Rechtsgebiete <span class="mob-arrow"></span></div>
+      <div class="mob-submenu" id="mob-rg">
+        {% for a in rechtsgebiete %}<a href="/rechtsgebiete/{{ a.slug }}/">{{ a.name }}</a>{% endfor %}
+      </div>
+    </li>
+    <li><a class="mob-link" href="/kontakt/">Kontakt</a></li>
+  </ul>
+</div>
+
+<main>
+{{ content | safe }}
+</main>
+
+{% if not hideContact %}{% include "contact-section.njk" %}{% endif %}
+
+<footer>
+  <span>© {{ site.name }}</span>
+  <div><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="/downloads/">Downloads</a></div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+---
+layout: base.njk
+pagination:
+  data: rechtsgebiete
+  size: 1
+  alias: a
+permalink: "/rechtsgebiete/{{ a.slug }}/"
+eleventyComputed:
+  title: "{{ a.name }}"
+  description: "{{ a.name }} – Ihre Ansprechpartnerinnen in der Bürogemeinschaft anwält*innen berlin, Potsdamer Straße 143, Berlin Schöneberg."
+---
+{%- set members = team | membersOf(a.slug) -%}
+<section class="page">
+  <div class="page-narrow">
+    <p class="crumb"><a href="/#rechtsgebiete">Rechtsgebiete</a></p>
+    <h1 class="area-title"><span class="dot dot-pulse" style="--c:{{ a.color }}"></span>{{ a.name }}</h1>
+    {% if a.intro %}<div class="prose">{{ a.intro | safe }}</div>{% endif %}
+  </div>
+</section>
+
+<section class="team-section on-page">
+  <div class="section-label">Ansprechpartner*innen</div>
+  <p class="team-intro">Wenden Sie sich gerne an uns.</p>
+  <div class="team-grid">
+    {% for p in members %}{% set idx = loop.index0 %}{% include "team-card.njk" %}{% endfor %}
+  </div>
+</section>

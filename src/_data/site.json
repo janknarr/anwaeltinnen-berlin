@@ -1,0 +1,25 @@
+{
+  "name": "anwält*innen berlin",
+  "url": "https://anwaeltinnen.berlin",
+  "description": "Bürogemeinschaft engagierter Anwält*innen in Berlin Schöneberg – Strafverteidigung & Nebenklage, Asyl & Aufenthaltsrecht, Familie & Partnerschaft, Trans* & Personenstand, Erbschaft.",
+  "address": {
+    "line1": "Potsdamer Straße 143",
+    "line2": "10783 Berlin",
+    "district": "Schöneberg",
+    "note": "Bald unter neuer Adresse erreichbar",
+    "mapUrl": "https://www.openstreetmap.org/search?query=Potsdamer%20Stra%C3%9Fe%20143%2C%2010783%20Berlin"
+  },
+  "phone": "030 39 80 86 84",
+  "phoneHref": "+493039808684",
+  "fax": "030 39 80 86 63",
+  "mailNote": "Bitte wenden Sie sich direkt an die jeweilige Anwält*in unter:",
+  "mailPattern": "[Nachname]@anwaeltinnen.berlin",
+  "hours": [
+    { "days": "Montag", "time": "10–13 Uhr" },
+    { "days": "Dienstag & Donnerstag", "time": "10–13 und 14–17 Uhr" },
+    { "days": "Freitag", "time": "10–13 Uhr" },
+    { "days": "Mittwoch", "time": "geschlossen" }
+  ],
+  "access": ["Potsdamer Straße, Höhe U-Bahnhof Bülowstraße", "3. OG mit Fahrstuhl"],
+  "transit": ["U-Bahnhof Bülowstraße", "U-Bahn: U2", "Bus: M19, M48, M85, 106, 187"]
+}

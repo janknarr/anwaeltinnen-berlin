@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: Kontakt & Öffnungszeiten
+description: Bürogemeinschaft anwält*innen berlin, Potsdamer Straße 143, 10783 Berlin – Telefon 030 39 80 86 84, Öffnungszeiten und Anfahrt.
+permalink: /kontakt/
+hideContact: true
+---
+<section class="page">
+  <div class="page-inner">
+    <p class="crumb">Kontakt</p>
+    <h1>Kontakt &amp; Öffnungszeiten</h1>
+    <div class="contact-grid">
+      <div>
+        <div class="block-label">Post- und Besuchsadresse</div>
+        <p>{{ site.name }}<br>Bürogemeinschaft<br>{{ site.address.line1 }}<br>{{ site.address.line2 }}</p>
+        {% if site.address.note %}<p class="bald">{{ site.address.note }}</p>{% endif %}
+        <p style="margin-top:0.5rem"><a href="{{ site.address.mapUrl }}">Auf der Karte ansehen →</a></p>
+
+        <div class="block-label">Telefon</div>
+        <p><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></p>
+        <div class="block-label">Fax</div>
+        <p>{{ site.fax }}</p>
+        <div class="block-label">E-Mail</div>
+        <p>{{ site.mailNote }}<br>{{ site.mailPattern }}</p>
+      </div>
+      <div>
+        <div class="block-label">Öffnungszeiten</div>
+        <dl class="hours">{% for h in site.hours %}<dt>{{ h.days }}</dt><dd>{{ h.time }}</dd>{% endfor %}</dl>
+
+        <div class="block-label">Erreichbarkeit</div>
+        <p>{% for l in site.access %}{{ l }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
+
+        <div class="block-label">Öffentliche Verkehrsmittel</div>
+        <p>{% for l in site.transit %}{{ l }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
+      </div>
+    </div>
+  </div>
+</section>

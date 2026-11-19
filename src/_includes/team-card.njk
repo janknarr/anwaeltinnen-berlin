@@ -1,0 +1,15 @@
+{%- set c = idx | default(0) -%}
+{%- if p.published -%}
+<a class="team-card" href="/team/{{ p.slug }}/">
+  <img class="tc-img" src="/bilder/team/{{ p.photo }}-card.jpg" alt="{{ p.name }}" loading="lazy">
+{%- else -%}
+<div class="team-card">
+  <div class="tc-placeholder">{{ p.initials }}</div>
+{%- endif %}
+  <div class="tc-overlay">
+    <div class="tc-name">{{ p.name }}</div>
+    <div class="tc-dots">
+      {%- for s in p.areas %}{% set a = rechtsgebiete | area(s) %}<span class="dot dot-sm dot-pulse" style="--c:{{ a.color }};animation-delay:{{ (c * 3 + loop.index0) | breath }}"></span>{% endfor -%}
+    </div>
+  </div>
+{% if p.published %}</a>{% else %}</div>{% endif %}

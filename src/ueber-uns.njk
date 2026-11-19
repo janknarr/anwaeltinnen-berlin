@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Über uns
+description: Spezialisiert in verschiedenen Rechtsgebieten beraten und vertreten wir unsere Mandant*innen umfassend und themenübergreifend – Bürogemeinschaft in Berlin Schöneberg.
+permalink: /ueber-uns/
+---
+<section class="page">
+  <div class="page-narrow">
+    <p class="crumb">Über uns</p>
+    <h1>Das sind wir</h1>
+    <div class="prose">
+      <p>Spezialisiert in verschiedenen Rechtsgebieten nutzen wir in der Zusammenarbeit unsere unterschiedlichen Kompetenzen für unsere Mandant*innen. So können wir diese umfassend und themenübergreifend beraten und vertreten.</p>
+      <p>Dabei stützen wir uns auf langjährige Erfahrung und ein Netz aus zivilgesellschaftlichen und rechtspolitischen Akteur*innen und Organisationen.</p>
+      <p>Zu uns gehört ein Team engagierter Mitarbeitender.</p>
+    </div>
+  </div>
+</section>
+
+<section class="team-section on-page">
+  <div class="section-label">Das Team</div>
+  <p class="team-intro">Acht Anwält*innen – eine gemeinsame Überzeugung.</p>
+  <div class="team-grid">
+    {% for p in team %}{% set idx = loop.index0 %}{% include "team-card.njk" %}{% endfor %}
+  </div>
+</section>

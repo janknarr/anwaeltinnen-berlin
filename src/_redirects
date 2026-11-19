@@ -1,0 +1,16 @@
+# Alte WordPress-Adressen → neue Seiten (wird von Cloudflare Pages ausgewertet)
+/christina-clemm/                 /team/christina-clemm/              301
+/valeska-knarr/                   /team/valeska-knarr/                301
+/maria-kroepfl/                   /team/maria-kroepfl/                301
+/barbara-petersen/                /team/barbara-petersen/             301
+/inken-stern/                     /team/inken-stern/                  301
+/barbara-wessel/                  /team/barbara-wessel/               301
+/unser-buero/                     /ueber-uns/                         301
+/rechtsgebiete-2/                 /#rechtsgebiete                     301
+/asyl-und-aufenthaltsrecht-2/     /rechtsgebiete/asyl/                301
+/familie-und-partnerschaft/       /rechtsgebiete/familie/             301
+/strafverteidigung-und-nebenklage/ /rechtsgebiete/strafverteidigung/  301
+/trans-und-personenstand/         /rechtsgebiete/trans/               301
+/erbschaft/                       /rechtsgebiete/erbschaft/           301
+/kontakt-oeffnungszeiten/         /kontakt/                           301
+/deutsch/                         /                                   301

@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "christina-clemm",
+    "name": "Christina Clemm",
+    "initials": "CC",
+    "published": true,
+    "photo": "christina-clemm",
+    "since": "Rechtsanwältin seit 1996",
+    "titles": ["Fachanwältin für Strafrecht", "Fachanwältin für Familienrecht"],
+    "bio": [
+      "Geboren 1967, drei Kinder. Studium und Referendariat in Freiburg i. Br. und Berlin."
+    ],
+    "stations": [],
+    "membershipsIntro": "",
+    "memberships": [
+      "Ich bin Mitglied der <a href=\"https://strafverteidiger-berlin.de/\">Vereinigung Berliner Strafverteidiger*innen</a> und berate in der Untersuchungshaftanstalt und der Strafanstalt.",
+      "Ich bin auch Mitglied des <a href=\"https://www.rav.de/\">Republikanischen Anwältinnen- und Anwältevereins (RAV)</a>. Dort gebe ich u. a. Fortbildungen für Rechtsanwält*innen.",
+      "Ich bin aktiv im Anwaltsnotdienst und in der überregionalen Demonstrationsbegleitung bzw. -beobachtung.",
+      "Außerdem bin ich Gründungsmitglied des <a href=\"https://www.nebenklage.org/\">Nebenklage e.V.</a>",
+      "Ich nehme an der interdisziplinären Arbeitsgruppe Recht der Berliner Fachrunde gegen sexuelle Gewalt teil und berate bei <a href=\"https://www.lara-berlin.de/\">LARA e.V.</a>, dem Krisen- und Beratungszentrum für vergewaltigte Frauen.",
+      "Ich war Mitglied der <a href=\"http://www.bmjv.de/SharedDocs/Kurzmeldungen/DE/2015/20150220-Stn-Reform_Sexualstrafrecht.html?nn=3433226\">Expertenkommission zur Reform des Sexualstrafrechts beim Bundesministerium für Justiz und Verbraucherschutz</a>."
+    ],
+    "areas": ["strafverteidigung", "familie"],
+    "focus": ["Strafrecht, insbesondere Nebenklage", "Familienrecht", "Gewaltschutz"],
+    "languages": "Deutsch und Englisch",
+    "phone": "030 62 20 17 48",
+    "phoneHref": "+493062201748",
+    "email": "clemm@anwaeltinnen.berlin"
+  },
+  {
+    "slug": "valeska-knarr",
+    "name": "Valeska Knarr",
+    "initials": "VK",
+    "published": true,
+    "photo": "valeska-knarr",
+    "since": "Rechtsanwältin seit 2018",
+    "titles": [],
+    "bio": [],
+    "stations": [],
+    "membershipsIntro": "",
+    "memberships": [],
+    "areas": ["strafverteidigung", "familie"],
+    "focus": ["Strafrecht, insbesondere Nebenklage", "Familienrecht", "Gewaltschutz"],
+    "languages": "Deutsch und Englisch",
+    "phone": "030 39 80 86 85",
+    "phoneHref": "+493039808685",
+    "email": "knarr@anwaeltinnen.berlin"
+  },
+  {
+    "slug": "maria-kroepfl",
+    "name": "Maria Kröpfl",
+    "initials": "MK",
+    "published": true,
+    "photo": "maria-kroepfl",
+    "since": "",
+    "titles": [],
+    "bio": [
+      "Mit meiner Arbeit will ich Gewaltstrukturen bekämpfen. Dabei ist es mir ein besonderes persönliches und politisches Anliegen, die Rechte queerer Menschen, Frauen und Kinder zu stärken.",
+      "Ich habe Jura studiert, um Menschen dabei unterstützen zu können, für ihre Rechte einzustehen. Als Referendarin habe ich bereits in der Nebenklagevertretung, im Sexualstrafrecht und im Familienrecht gearbeitet und festgestellt, dass ich als feministische Anwältin in diesen Bereichen am wirksamsten meine Ideale umsetzen kann. Die Kombination von Straf- und Familienrecht ermöglicht es mir, umfassend gegen Gewaltausübung vorzugehen und mich für Menschen einzusetzen, deren Rechte gestärkt werden müssen."
+    ],
+    "stations": [],
+    "membershipsIntro": "",
+    "memberships": [
+      "<a href=\"https://www.djb.de/\">Deutscher Juristinnenbund (djb)</a>",
+      "<a href=\"https://www.rav.de/\">Republikanischer Anwältinnen- und Anwälteverein (RAV)</a>",
+      "<a href=\"https://2024.feministischer-juristinnentag.de/\">Orgateam Feministischer Juristinnen*tag 2024 (FJT)</a>"
+    ],
+    "areas": ["strafverteidigung", "familie"],
+    "focus": ["Strafrecht, insbesondere Nebenklage", "Familienrecht", "Gewaltschutz"],
+    "languages": "Deutsch und Englisch",
+    "phone": "030 39 80 86 84",
+    "phoneHref": "+493039808684",
+    "email": "kroepfl@anwaeltinnen.berlin"
+  },
+  {
+    "slug": "barbara-petersen",
+    "name": "Barbara Petersen",
+    "initials": "BP",
+    "published": true,
+    "photo": "barbara-petersen",
+    "since": "Rechtsanwältin seit 1995",
+    "titles": [],
+    "bio": [],
+    "stations": [
+      { "year": "2012", "text": "Gründung der Kooperation Yorckstraße 80 mit den Rechtsanwält*innen C. Clemm, I. Stern und B. Wessel" },
+      { "year": "2016", "text": "Bestellung zur Anhörungsbeauftragten der Unabhängigen Kommission zur Aufarbeitung sexuellen Kindesmissbrauchs beim Unabhängigen Beauftragten für Fragen des sexuellen Kindesmissbrauchs" }
+    ],
+    "membershipsIntro": "",
+    "memberships": [
+      "Ich bin Vorständin des <a href=\"https://www.nebenklage-verein.org/\">Nebenklage e.V.</a>, des 2006 durch Berliner Rechtsanwält*innen gegründeten Vereins zur Stärkung der Verletztenrechte im Strafverfahren.",
+      "Ferner bin ich Mitglied der <a href=\"https://strafverteidiger-berlin.de/\">Vereinigung Berliner Strafverteidiger*innen e.V.</a> sowie des <a href=\"https://www.rav.de/\">RAV</a>, Anwält*innen für Demokratie und Menschenrechte."
+    ],
+    "areas": ["strafverteidigung", "familie"],
+    "focus": ["Strafrecht, insbesondere Nebenklage", "Familienrecht"],
+    "languages": "Deutsch und Englisch",
+    "phone": "030 39 80 86 62",
+    "phoneHref": "+493039808662",
+    "email": "mail@barbara-petersen.de"
+  },
+  {
+    "slug": "inken-stern",
+    "name": "Inken Stern",
+    "initials": "IS",
+    "published": true,
+    "photo": "inken-stern",
+    "since": "Rechtsanwält*in seit 2011",
+    "titles": [],
+    "bio": [],
+    "stations": [],
+    "membershipsIntro": "",
+    "memberships": [],
+    "areas": ["asyl", "trans", "erbschaft"],
+    "focus": ["Erbrecht", "Migrationsrecht, insbesondere Asylrecht", "Personenstands- und Trans*recht"],
+    "languages": "Deutsch und Englisch",
+    "phone": "030 39 80 86 64",
+    "phoneHref": "+493039808664",
+    "email": "stern@anwaeltinnen.berlin"
+  },
+  {
+    "slug": "barbara-wessel",
+    "name": "Barbara Wessel",
+    "initials": "BW",
+    "published": true,
+    "photo": "barbara-wessel",
+    "since": "Rechtsanwältin seit 2002",
+    "titles": [],
+    "bio": [],
+    "stations": [],
+    "membershipsIntro": "",
+    "memberships": [],
+    "areas": ["asyl", "familie"],
+    "focus": ["Migrationsrecht, insbesondere Asylrecht", "Familienrecht für binationale queere Familienkonstellationen"],
+    "languages": "Deutsch, Englisch und Französisch",
+    "phone": "030 39 80 86 65",
+    "phoneHref": "+493039808665",
+    "email": "wessel@anwaeltinnen.berlin"
+  },
+  {
+    "slug": "neu-1",
+    "name": "Neue Kollegin",
+    "initials": "N7",
+    "published": false,
+    "photo": "",
+    "areas": []
+  },
+  {
+    "slug": "neu-2",
+    "name": "Neue Kollegin",
+    "initials": "N8",
+    "published": false,
+    "photo": "",
+    "areas": []
+  }
+]

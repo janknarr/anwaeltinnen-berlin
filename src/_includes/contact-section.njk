@@ -1,0 +1,18 @@
+<section class="kontakt fade-up" id="kontakt">
+  <div class="kontakt-inner">
+    <div>
+      <div class="k-label">Kontakt</div>
+      <div class="k-item"><span>Telefon</span><p><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></p></div>
+      <div class="k-item"><span>E-Mail</span><p>{{ site.mailNote }} {{ site.mailPattern }}</p></div>
+      <div class="k-item">
+        <span>Adresse</span>
+        <p>{{ site.address.line1 }}<br>{{ site.address.line2 }} {{ site.address.district }}</p>
+        {% if site.address.note %}<p class="bald">{{ site.address.note }}</p>{% endif %}
+      </div>
+    </div>
+    <div>
+      <div class="k-label">Öffnungszeiten</div>
+      {% for h in site.hours %}<div class="k-item"><span>{{ h.days }}</span><p>{{ h.time }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>

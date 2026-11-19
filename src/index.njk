@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Bürogemeinschaft · Berlin Schöneberg</p>
+    <h1>Für Ihr Recht:<br>Erfahren, solidarisch, durchsetzungsstark.</h1>
+    <p class="hero-sub">Wir vertreten Menschen und Leben. Dafür geben wir alles. Als Bürogemeinschaft engagierter Anwält*innen stehen wir an Ihrer Seite.</p>
+  </div>
+  <div class="hero-img">
+    <img src="https://github.com/janknarr/anwaeltinnen.berlin.bilder/blob/main/teambild-mobile.png?raw=true" alt="Die Anwält*innen der Bürogemeinschaft">
+  </div>
+</section>
+
+<div class="quote-section fade-up">
+  <blockquote>Lassen wir uns nicht schrecken durch die Ungunst äußerer Umstände, haben wir für alle Schwierigkeiten nur eine Antwort: Erst recht!</blockquote>
+  <cite>— Clara Zetkin</cite>
+</div>
+
+<section class="rg-section fade-up" id="rechtsgebiete">
+  <div style="font-size:14px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa;margin-bottom:1.5rem;">Unsere Rechtsgebiete</div>
+  {% for a in rechtsgebiete %}
+  <a class="rg-item" href="/rechtsgebiete/{{ a.slug }}/"><span class="rg-name"><span class="dot dot-pulse" style="--c:{{ a.color }};animation-delay:{{ loop.index0 * 1.2 }}s"></span>{{ a.name }}</span><span class="rg-arrow">→</span></a>
+  {% endfor %}
+</section>
+
+<section class="team-section fade-up" id="team">
+  <div class="section-label">Das Team</div>
+  <p class="team-intro">Acht Anwält*innen – eine gemeinsame Überzeugung.</p>
+  <div class="team-grid" data-shuffle>
+    {% for p in team %}{% set idx = loop.index0 %}{% include "team-card.njk" %}{% endfor %}
+  </div>
+</section>
+
+<section class="wie fade-up">
+  <div class="wie-label">Wie wir arbeiten</div>
+  <div class="wie-text">
+    An der Seite unserer Mandant*innen arbeiten wir für die Durchsetzung ihrer Rechte – mit langjährigem Fachwissen und einer starken Bürogemeinschaft. Die Vertretung von Menschen mit Diskriminierungs- und Gewalterfahrungen liegt uns besonders am Herzen.
+    <div class="pills">
+      <span class="pill active">Deutsch</span>
+      <span class="pill" data-lang="EN">English</span>
+      <span class="pill" data-lang="TR">Türkçe</span>
+      <span class="pill" data-lang="RU">Русский</span>
+      <span class="pill" data-lang="AR">عربى</span>
+    </div>
+  </div>
+</section>
+
+<div class="city fade-up">
+  <img src="/bilder/buelowstrasse.jpg" alt="U-Bahnhof Bülowstraße, Berlin Schöneberg" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block;">
+</div>

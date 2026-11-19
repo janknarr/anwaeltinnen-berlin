@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "strafverteidigung",
+    "name": "Strafverteidigung & Nebenklage",
+    "color": "#fffb86",
+    "intro": ""
+  },
+  {
+    "slug": "asyl",
+    "name": "Asyl & Aufenthaltsrecht",
+    "color": "#e4aaec",
+    "intro": ""
+  },
+  {
+    "slug": "familie",
+    "name": "Familie & Partnerschaft",
+    "color": "#2ab5a0",
+    "intro": ""
+  },
+  {
+    "slug": "trans",
+    "name": "Trans* & Personenstand",
+    "color": "#ff97b6",
+    "intro": ""
+  },
+  {
+    "slug": "erbschaft",
+    "name": "Erbschaft",
+    "color": "#9cfbac",
+    "intro": ""
+  }
+]
