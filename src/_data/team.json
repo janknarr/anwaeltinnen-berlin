@@ -6,7 +6,10 @@
     "published": true,
     "photo": "christina-clemm",
     "since": "Rechtsanwältin seit 1996",
-    "titles": ["Fachanwältin für Strafrecht", "Fachanwältin für Familienrecht"],
+    "titles": [
+      "Fachanwältin für Strafrecht",
+      "Fachanwältin für Familienrecht"
+    ],
     "bio": [
       "Geboren 1967, drei Kinder. Studium und Referendariat in Freiburg i. Br. und Berlin."
     ],
@@ -20,8 +23,15 @@
       "Ich nehme an der interdisziplinären Arbeitsgruppe Recht der Berliner Fachrunde gegen sexuelle Gewalt teil und berate bei <a href=\"https://www.lara-berlin.de/\">LARA e.V.</a>, dem Krisen- und Beratungszentrum für vergewaltigte Frauen.",
       "Ich war Mitglied der <a href=\"http://www.bmjv.de/SharedDocs/Kurzmeldungen/DE/2015/20150220-Stn-Reform_Sexualstrafrecht.html?nn=3433226\">Expertenkommission zur Reform des Sexualstrafrechts beim Bundesministerium für Justiz und Verbraucherschutz</a>."
     ],
-    "areas": ["strafverteidigung", "familie"],
-    "focus": ["Strafrecht, insbesondere Nebenklage", "Familienrecht", "Gewaltschutz"],
+    "areas": [
+      "strafverteidigung",
+      "familie"
+    ],
+    "focus": [
+      "Strafrecht, insbesondere Nebenklage",
+      "Familienrecht",
+      "Gewaltschutz"
+    ],
     "languages": "Deutsch und Englisch",
     "phone": "030 62 20 17 48",
     "phoneHref": "+493062201748",
@@ -39,8 +49,15 @@
     "stations": [],
     "membershipsIntro": "",
     "memberships": [],
-    "areas": ["strafverteidigung", "familie"],
-    "focus": ["Strafrecht, insbesondere Nebenklage", "Familienrecht", "Gewaltschutz"],
+    "areas": [
+      "strafverteidigung",
+      "familie"
+    ],
+    "focus": [
+      "Strafrecht, insbesondere Nebenklage",
+      "Familienrecht",
+      "Gewaltschutz"
+    ],
     "languages": "Deutsch und Englisch",
     "phone": "030 39 80 86 85",
     "phoneHref": "+493039808685",
@@ -65,12 +82,48 @@
       "<a href=\"https://www.rav.de/\">Republikanischer Anwältinnen- und Anwälteverein (RAV)</a>",
       "<a href=\"https://2024.feministischer-juristinnentag.de/\">Orgateam Feministischer Juristinnen*tag 2024 (FJT)</a>"
     ],
-    "areas": ["strafverteidigung", "familie"],
-    "focus": ["Strafrecht, insbesondere Nebenklage", "Familienrecht", "Gewaltschutz"],
+    "areas": [
+      "strafverteidigung",
+      "familie"
+    ],
+    "focus": [
+      "Strafrecht, insbesondere Nebenklage",
+      "Familienrecht",
+      "Gewaltschutz"
+    ],
     "languages": "Deutsch und Englisch",
     "phone": "030 39 80 86 84",
     "phoneHref": "+493039808684",
     "email": "kroepfl@anwaeltinnen.berlin"
+  },
+  {
+    "slug": "mareike-sierk",
+    "name": "Mareike Sierk",
+    "initials": "MS",
+    "published": false,
+    "photo": "",
+    "areas": [
+      "strafverteidigung",
+      "familie"
+    ],
+    "focus": [
+      "Strafrecht, insbesondere Nebenklage",
+      "Familienrecht",
+      "Gewaltschutz"
+    ]
+  },
+  {
+    "slug": "leo-passler",
+    "name": "Leo Paßler",
+    "initials": "LP",
+    "published": false,
+    "photo": "",
+    "areas": [
+      "asyl"
+    ],
+    "focus": [
+      "Asyl- und Aufenthaltsrecht"
+    ]
   },
   {
     "slug": "barbara-petersen",
@@ -82,16 +135,28 @@
     "titles": [],
     "bio": [],
     "stations": [
-      { "year": "2012", "text": "Gründung der Kooperation Yorckstraße 80 mit den Rechtsanwält*innen C. Clemm, I. Stern und B. Wessel" },
-      { "year": "2016", "text": "Bestellung zur Anhörungsbeauftragten der Unabhängigen Kommission zur Aufarbeitung sexuellen Kindesmissbrauchs beim Unabhängigen Beauftragten für Fragen des sexuellen Kindesmissbrauchs" }
+      {
+        "year": "2012",
+        "text": "Gründung der Kooperation Yorckstraße 80 mit den Rechtsanwält*innen C. Clemm, I. Stern und B. Wessel"
+      },
+      {
+        "year": "2016",
+        "text": "Bestellung zur Anhörungsbeauftragten der Unabhängigen Kommission zur Aufarbeitung sexuellen Kindesmissbrauchs beim Unabhängigen Beauftragten für Fragen des sexuellen Kindesmissbrauchs"
+      }
     ],
     "membershipsIntro": "",
     "memberships": [
       "Ich bin Vorständin des <a href=\"https://www.nebenklage-verein.org/\">Nebenklage e.V.</a>, des 2006 durch Berliner Rechtsanwält*innen gegründeten Vereins zur Stärkung der Verletztenrechte im Strafverfahren.",
       "Ferner bin ich Mitglied der <a href=\"https://strafverteidiger-berlin.de/\">Vereinigung Berliner Strafverteidiger*innen e.V.</a> sowie des <a href=\"https://www.rav.de/\">RAV</a>, Anwält*innen für Demokratie und Menschenrechte."
     ],
-    "areas": ["strafverteidigung", "familie"],
-    "focus": ["Strafrecht, insbesondere Nebenklage", "Familienrecht"],
+    "areas": [
+      "strafverteidigung",
+      "familie"
+    ],
+    "focus": [
+      "Strafrecht, insbesondere Nebenklage",
+      "Familienrecht"
+    ],
     "languages": "Deutsch und Englisch",
     "phone": "030 39 80 86 62",
     "phoneHref": "+493039808662",
@@ -109,8 +174,16 @@
     "stations": [],
     "membershipsIntro": "",
     "memberships": [],
-    "areas": ["asyl", "trans", "erbschaft"],
-    "focus": ["Erbrecht", "Migrationsrecht, insbesondere Asylrecht", "Personenstands- und Trans*recht"],
+    "areas": [
+      "asyl",
+      "trans",
+      "erbschaft"
+    ],
+    "focus": [
+      "Erbrecht",
+      "Migrationsrecht, insbesondere Asylrecht",
+      "Personenstands- und Trans*recht"
+    ],
     "languages": "Deutsch und Englisch",
     "phone": "030 39 80 86 64",
     "phoneHref": "+493039808664",
@@ -128,27 +201,17 @@
     "stations": [],
     "membershipsIntro": "",
     "memberships": [],
-    "areas": ["asyl", "familie"],
-    "focus": ["Migrationsrecht, insbesondere Asylrecht", "Familienrecht für binationale queere Familienkonstellationen"],
+    "areas": [
+      "asyl",
+      "familie"
+    ],
+    "focus": [
+      "Migrationsrecht, insbesondere Asylrecht",
+      "Familienrecht für binationale queere Familienkonstellationen"
+    ],
     "languages": "Deutsch, Englisch und Französisch",
     "phone": "030 39 80 86 65",
     "phoneHref": "+493039808665",
     "email": "wessel@anwaeltinnen.berlin"
-  },
-  {
-    "slug": "neu-1",
-    "name": "Neue Kollegin",
-    "initials": "N7",
-    "published": false,
-    "photo": "",
-    "areas": []
-  },
-  {
-    "slug": "neu-2",
-    "name": "Neue Kollegin",
-    "initials": "N8",
-    "published": false,
-    "photo": "",
-    "areas": []
   }
 ]

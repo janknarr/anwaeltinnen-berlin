@@ -18,7 +18,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("published", (team) => team.filter((p) => p.published));
   eleventyConfig.addFilter("area", (areas, slug) => areas.find((a) => a.slug === slug));
   eleventyConfig.addFilter("membersOf", (team, slug) =>
-    team.filter((p) => p.published && (p.areas || []).includes(slug))
+    team.filter((p) => (p.areas || []).includes(slug))
   );
   // Gleichmäßig verteilte Startzeitpunkte für die "atmenden" Farbpunkte (6s-Zyklus)
   eleventyConfig.addFilter("breath", (i) => ((i * 1.7) % 6).toFixed(1) + "s");
