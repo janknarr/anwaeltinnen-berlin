@@ -45,18 +45,29 @@
     "photo": "valeska-knarr",
     "since": "Rechtsanwältin seit 2018",
     "titles": [],
-    "bio": [],
+    "bio": [
+      "Der Schwerpunkt meiner anwaltlichen Tätigkeit liegt im Strafrecht und im Familienrecht. Ich bin insbesondere auf die Vertretung von Betroffenen und Hinterbliebenen von Gewalt im Rahmen der Nebenklage sowie auf den Gewaltschutz spezialisiert. Mein Fokus liegt auf der Unterstützung Verletzter bei häuslicher und sexualisierter Gewalt sowie Stalking. Häufig spielen dabei geschlechtsspezifische oder rassistische Motive eine Rolle. Einen zunehmend großen Anteil nimmt zudem die Vertretung Betroffener von digitaler Gewalt ein, im öffentlichen wie im privaten Bereich.",
+      "Solche Übergriffe gehen oft mit einem Gefühl der Hilflosigkeit einher. Mein Antrieb ist es, Betroffene umfassend über ihre Rechte aufzuklären und für deren Durchsetzung auf allen Ebenen einzutreten.",
+      "Im Familienrecht berate und vertrete ich Mandant*innen in Fragen des Sorge- und Umgangsrechts. Gerne können Sie sich auch im Rahmen Ihrer Scheidung an mich wenden.",
+      "Ich bin in Berlin geboren und habe hier studiert. Schon im Referendariat habe ich zur langjährigen Bürogemeinschaft von Christina Clemm, Barbara Wessel, Inken Stern und Barbara Petersen gefunden. Nach meinem zweiten Staatsexamen habe ich ab 2018 als angestellte Anwältin bei Christina Clemm in zahlreichen Mandaten Erfahrung gesammelt, bevor ich mich als selbstständige Anwältin in der Bürogemeinschaft niedergelassen habe."
+    ],
     "stations": [],
     "membershipsIntro": "",
-    "memberships": [],
+    "memberships": [
+      "Als Vorstandsmitglied des <a href=\"https://www.nebenklage-verein.org/\">Nebenklage e.V.</a> engagiere ich mich für eine grundsätzliche Verbesserung und Stärkung der Rechte von Verletzten von Straftaten.",
+      "Ich bin Mitglied im <a href=\"https://www.djb.de/\">Deutschen Juristinnenbund e.V. (djb)</a>, da mir die Weiterentwicklung des Rechts für eine geschlechtergerechte Gesellschaft ein wichtiges Anliegen ist.",
+      "Ich berate regelmäßig bei <a href=\"https://www.lara-berlin.de/\">LARA e.V.</a>, dem Krisen- und Beratungszentrum für von sexualisierter Gewalt betroffene Frauen*,",
+      "bei <a href=\"https://www.eulalia-eigensinn.de/\">EULALIA EIGENSINN e.V.</a>, der Fachberatungsstelle für von häuslicher Gewalt betroffene Frauen,",
+      "sowie im <a href=\"https://www.anti-stalking-projekt.de/\">Anti-Stalking-Projekt</a>, der Beratungsstelle für Frauen*, die von Stalking und/oder Cyberstalking betroffen sind. In diesem Bereich gebe ich zudem Fortbildungen."
+    ],
     "areas": [
       "strafverteidigung",
       "familie"
     ],
     "focus": [
       "Strafrecht, insbesondere Nebenklage",
-      "Familienrecht",
-      "Gewaltschutz"
+      "Gewaltschutz",
+      "Familienrecht: Sorge- und Umgangsrecht, Scheidung"
     ],
     "languages": "Deutsch und Englisch",
     "phone": "030 39 80 86 85",
